@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="현대미술의 질문과 고대 철학자의 관점을 연결한 대화형 웹사이트, 생각의 표본">
+    <title>SPECIMEN OF THOUGHT</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="tank">
+        <div class="specimen-shape"></div>
+        <div class="measure measure-a"></div>
+        <div class="measure measure-b"></div>
+      </div>
+    </div>
+
+    <header class="site-header" aria-label="프로젝트 상태">
+      <button class="ghost-button" id="backButton" type="button">이전</button>
+      <div>
+        <p class="eyebrow">SPECIMEN OF THOUGHT</p>
+        <p class="screen-name" id="screenName">생각의 표본</p>
+      </div>
+      <p class="progress" id="progressText" aria-live="polite">00/08</p>
+    </header>
+
+    <main id="app" class="app" tabindex="-1"></main>
+
+    <div id="liveRegion" class="sr-only" aria-live="polite"></div>
+
+    <script src="data/dialogues.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

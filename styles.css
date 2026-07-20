@@ -28,9 +28,15 @@ body {
   margin: 0;
   color: var(--color-text);
   background:
+    linear-gradient(180deg, rgba(8, 11, 13, 0.08), rgba(8, 11, 13, 0.36) 54%, rgba(8, 11, 13, 0.56)),
     radial-gradient(circle at 20% 10%, rgba(232, 74, 60, 0.12), transparent 28rem),
     radial-gradient(circle at 86% 84%, rgba(199, 244, 100, 0.08), transparent 24rem),
-    linear-gradient(150deg, #080b0d 0%, #0b1213 58%, #11100d 100%);
+    url("assets/textures/pool-bg.gif"),
+    url("assets/textures/specimen-bg.webp"),
+    transparent;
+  background-position: center, 20% 10%, 86% 84%, center, center, center;
+  background-size: cover, auto, auto, cover, cover, cover;
+  background-repeat: no-repeat;
   line-height: 1.65;
   overflow-x: hidden;
 }
@@ -184,11 +190,11 @@ dt {
 .dialogue-panel {
   width: 100%;
   padding: clamp(22px, 4vw, 44px);
-  border: 1px solid rgba(169, 214, 210, 0.24);
+  border: 0;
   border-radius: 8px;
-  background: rgba(8, 11, 13, 0.72);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 .hero-panel {
@@ -209,6 +215,7 @@ h1 {
   font-size: clamp(2rem, 6vw, 4.9rem);
   line-height: 1.1;
   font-weight: 700;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.78);
 }
 
 h2 {
@@ -221,6 +228,7 @@ p {
   margin: 0 0 16px;
   color: rgba(236, 239, 237, 0.82);
   font-size: 1rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.74);
 }
 
 .notice {
@@ -375,8 +383,11 @@ p {
 
 .question-block {
   margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(236, 239, 237, 0.12);
+  padding: 18px;
+  border: 1px solid rgba(169, 214, 210, 0.24);
+  border-radius: 8px;
+  background: rgba(8, 11, 13, 0.46);
+  backdrop-filter: blur(10px);
 }
 
 .cubist {
@@ -603,6 +614,19 @@ dd {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  body {
+    background:
+      linear-gradient(180deg, rgba(8, 11, 13, 0.08), rgba(8, 11, 13, 0.36) 54%, rgba(8, 11, 13, 0.56)),
+      radial-gradient(circle at 20% 10%, rgba(232, 74, 60, 0.12), transparent 28rem),
+      radial-gradient(circle at 86% 84%, rgba(199, 244, 100, 0.08), transparent 24rem),
+      url("assets/textures/pool-bg-static.webp"),
+      url("assets/textures/specimen-bg.webp"),
+      transparent;
+    background-position: center, 20% 10%, 86% 84%, center, center, center;
+    background-size: cover, auto, auto, cover, cover, cover;
+    background-repeat: no-repeat;
+  }
+
   *,
   *::before,
   *::after {
